@@ -12,13 +12,10 @@ total_seats int(11)
 
 
 create table air_passenger_profile(
-profile_id varchar(10) primary key,
+username varchar(30) not null,
 password varchar(10),
-first_name varchar(30) not null,
-last_name varchar(30),
 address varchar(45),
-mobile_number bigint(20) not null,
-email_id varchar(45) not null,
+email varchar(45)
 )
 
 
