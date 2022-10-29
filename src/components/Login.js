@@ -2,6 +2,19 @@ import {Form,Button} from 'react-bootstrap'
 import { FaSignInAlt } from "react-icons/fa";
 import loginimg from '../images/login.svg';
 
+
+function FetchAPI() {
+  
+  //Get Method
+  const apiGet = () => {
+    fetch("http://localhost/index.php/user/list?user_name="user_name"")
+      .then((response) => response.json())
+      .then((json) => {
+        console.log(json);
+       
+      });
+  };
+
 function Login() {
   return (
     <div className='container'>
@@ -26,7 +39,7 @@ function Login() {
             <Form.Control type="password" placeholder="enter password "/>
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" onclick={apiGet}>
         <a href="http://localhost:3000/main">L</a>LogIn <FaSignInAlt/>
         </Button>
     </Form>
