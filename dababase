@@ -1,0 +1,50 @@
+create table air_flight(
+flight_id varchar(45) primary key,
+airline_id varchar(45) not null,
+airline_name varchar(45),
+from_location varchar(45),
+to_location varchar(45),
+departure_time time,
+arrival_time time,
+duration time,
+total_seats int(11)
+)
+
+
+create table air_passenger_profile(
+profile_id varchar(10) primary key,
+password varchar(10),
+first_name varchar(30) not null,
+last_name varchar(30),
+address varchar(45),
+mobile_number bigint(20) not null,
+email_id varchar(45) not null,
+)
+
+
+create table air_ticket_info(
+ticket_id varchar(45) primary key,
+profile_id int FOREIGN KEY REFERENCES air_passenger_profile(profile_id),
+flight_id int FOREIGN KEY REFERENCES air_flight(flight_id),
+flight_departure_date,
+status varchar(45),
+)
+
+
+
+create table air_credit_card_details(
+profile_id int FOREIGN KEY REFERENCES air_passenger_profile(profile_id),
+card_number bigint(20),
+card_type varchar(45),
+expiration_month int(2),
+expiration_year int(11)
+)
+
+
+
+create table air_flight_details(
+flight_id int FOREIGN KEY REFERENCES air_flight(flight_id),
+flight_departure_date date,
+price decimal(10,2),
+available_seats int(11)
+)
