@@ -8,10 +8,11 @@ switch ($method) {
     case 'GET':
       
     case 'POST':
-      $name = $_POST["name"];
+      $username = $_POST["username"];
       $email = $_POST["email"];
       $city = $_POST["city"];
+      $password=$_POST["password"];
 
-      $sql = "insert into users (name, email, city) values ('$name', '$email', '$city')"; 
+      $sql = "insert into users (username, email, city,password) values ('$username', '$email', '$city','$password')"; 
       break;
 }
