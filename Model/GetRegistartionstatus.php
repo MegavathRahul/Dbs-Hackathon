@@ -5,6 +5,6 @@ class GetRegistartionstatus extends Database
 {
     public function getUsers($email)
     {
-        return $this->select("SELECT id FROM air_passenger_profile where email=$email",[] );
+        return $this->select("SELECT profile_id FROM air_passenger_profile where email=$email",[] );
     }
 }
