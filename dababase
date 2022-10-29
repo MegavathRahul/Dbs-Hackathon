@@ -14,7 +14,7 @@ total_seats int(11)
 create table air_passenger_profile(
 username varchar(30) not null,
 password varchar(10),
-address varchar(45),
+city varchar(45),
 email varchar(45),
 
 )
