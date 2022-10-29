@@ -1,4 +1,6 @@
 <?php
+require_once "/inc/config.php";
+
 class Database
 {
     protected $connection = null;
