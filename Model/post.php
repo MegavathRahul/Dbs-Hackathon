@@ -14,6 +14,6 @@ switch ($method) {
       $city = $_POST["city"];
       $password=$_POST["password"];
 
-      $sql = "insert into users (username, email, city,password) values ('$username', '$email', '$city','$password')"; 
+      $sql = "insert into air_passenger_profile(username, email, city,password) values ('$username', '$email', '$city','$password')"; 
       break;
 }
